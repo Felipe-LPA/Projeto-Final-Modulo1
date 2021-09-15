@@ -1,0 +1,103 @@
+/* GERAIS */
+* {
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+body {
+  background-color: #f3f2ee;
+}
+.container {
+  width: 92vw;
+  margin: 0 auto;
+}
+/* HEADER */
+header {
+  width: 100vw;
+
+  background-color: #fff;
+}
+#header {
+  display: flex;
+  height: 7vw;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+a#logo {
+  height: 4.422vw;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+#logo img {
+  height: 100%;
+}
+#search {
+  height: 4.422vw;
+  margin-left: 0.5vw;
+  width: 30.56vw;
+  font-size: 1.5vw;
+  background-image: url("https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/search-512.png");
+  background-size: 1.5vw;
+  background-repeat: no-repeat;
+  background-position: 2vw center;
+  text-indent: 4.5vw;
+  background-color: #eef3f7;
+}
+#search:focus {
+  background-image: none;
+  text-indent: 0px;
+}
+header nav ul {
+  font-size: 0.6rem;
+  display: flex;
+  width: 40vw;
+  justify-content: space-between;
+}
+header nav ul li {
+  width: 20%;
+}
+header nav ul a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+header nav ul img {
+  height: 2.602vw;
+  width: 2.602vw;
+  margin: 0 auto;
+  margin-bottom: 1vw;
+}
+#me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#me img {
+  border-radius: 50%;
+  height: 3.303vw;
+  margin-bottom: 0.5vw;
+}
+#me a {
+  text-align: center;
+}
+#me h2 {
+  font-size: 0.6rem;
+}
+@media only screen and (max-width: 600px) {
+  header nav ul a span {
+    display: none;
+  }
+}
