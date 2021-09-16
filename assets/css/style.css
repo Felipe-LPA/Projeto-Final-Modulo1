@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Rambla&display=swap');
-/* GERAIS */
+@import url("https://fonts.googleapis.com/css2?family=Rambla&display=swap");
+/* GENERAL */
 * {
   box-sizing: border-box;
 }
@@ -19,10 +19,12 @@ body {
   width: 93.238vw;
   margin: 0 auto;
 }
+.opacity {
+  opacity: 0.6;
+}
 /* HEADER */
 header {
   width: 100vw;
-
   background-color: var(--primary-bg-color);
 }
 #header {
@@ -52,6 +54,7 @@ a#logo {
   margin-left: 0.5vw;
   width: 30.56vw;
   font-size: 1.5vw;
+  /* Alterar */
   background-image: url("https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/search-512.png");
   background-size: 1.5vw;
   background-repeat: no-repeat;
@@ -104,23 +107,27 @@ header nav ul img {
 }
 
 /* MAIN */
-main{
-  font-family: 'Rambla', sans-serif;
+main {
+  font-family: "Rambla", sans-serif;
 }
 main section {
   margin: 4.9415vw 0;
   background-color: var(--primary-bg-color);
 }
 main section h1,
-main section h2,
 main section h3 {
-  font-weight: bold;
+  font-weight: 700;
 }
-/* Main Top */
+#topMain, 
+#bottomMain{
+  border-radius: 5px;
+}
+/* MAIN TOP */
 #banner {
   background-image: url(/assets/img/fundo.jpg);
   height: 17.556vw;
 }
+
 main #topMain img {
   border-radius: 50%;
   height: 13.868vw;
@@ -129,21 +136,85 @@ main #topMain img {
 }
 #mainInfo {
   height: 24.058vw;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 3.6411vw;
+  padding-left: 2.861vw;
+}
+#mainInfo h1 {
+  margin: 2vw 0;
+  font-size: 1.15rem;
+}
+#mainInfo h4 {
+  font-size: 0.9rem;
+}
+#mainInfo p {
+  font-size: 0.75rem;
+  margin: 1vw 0;
 }
 #mainInfo button {
   border-radius: 20px;
+  border: 1px solid #666666;
   font-size: 0.64rem;
-  padding:0.392vw 1.708vw;
+  font-weight: 700;
+  color: #666666;
+  background-color: var(--primary-bg-color);
+  padding: 0.392vw 1.708vw;
+  margin-right: 1.5vw;
 }
 #mainInfo div button:first-child {
-background-color: #0B65C2;
-color: var(--primary-bg-color);
+  border: 1px solid #0b65c2;
+  background-color: #0b65c2;
+  color: var(--primary-bg-color);
+}
+/* MAIN BOTTOM */
+#bottomMain {
+  padding: 2.5vw 0;
+}
+#bottomMain img {
+  height: 4.454vw;
+  margin-right: 2.5vw;
+}
+#bottomMain article:not(:last-child){
+  border-bottom: 1px solid #EBEBEB;
+  margin-bottom: 2.5vw;
+}
+#bottomMain h2 {
+  margin-bottom: 4vw;
+  font-size: 0.9rem;
+  margin-left: 2.5vw;
+}
+#bottomMain h3 {
+  font-size: 0.75rem;
+}
+#bottomMain p {
+  font-size: 0.7rem;
 }
 
+.box {
+  display: flex;
+  margin-left: 2.5vw;
+}
+.innerBox {
+  margin-bottom: 2vw;
+}
+.outerBox{
+  
+  margin-bottom: 2.5vw;
+}
+.separator{
+  margin-left: 9.5vw;
+  margin-bottom: 2.5vw;
+}
+.separator:not(:last-child){
+  border-bottom: 1px solid #EBEBEB;
+}
+#bottomMain a {
+  display: inline-block;
+}
+/* MEDIA QUERY */
 @media only screen and (max-width: 600px) {
   header nav ul a span {
     display: none;
