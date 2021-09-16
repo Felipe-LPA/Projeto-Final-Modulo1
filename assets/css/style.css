@@ -18,6 +18,8 @@ body {
 .container {
   width: 93.238vw;
   margin: 0 auto;
+  min-width: 280px;
+  max-width: 1100px;
 }
 .opacity {
   opacity: 0.6;
@@ -30,6 +32,7 @@ header {
 #header {
   display: flex;
   height: 7.674vw;
+  max-height: 85.7px;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -42,6 +45,7 @@ header section {
 /* LOGO */
 a#logo {
   height: 4.422vw;
+  max-height: 49.39px;
   width: auto;
   display: flex;
   align-items: center;
@@ -49,18 +53,40 @@ a#logo {
 #logo img {
   height: 100%;
 }
+#searchBox {
+  margin-left: 0.5vw;
+  height: 4.422vw;
+  max-height: 49.39px;
+  width: 30.56vw;
+  max-width: 341.34px;
+  border-collapse: collapse;
+  display: flex;
+  align-items: center;
+}
+#searchBox label {
+  width: 15%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 2px inset rgb(34, 34, 34);
+  border-bottom-color: rgb(118, 118, 118);
+  background-color: var(--secondary-bg-color);
+  border-right: none;
+}
+#searchBox label:hover {
+  cursor: text;
+}
+#searchBox label img {
+  height: 40%;
+}
 #search {
   height: 4.422vw;
-  margin-left: 0.5vw;
-  width: 30.56vw;
+  max-height: 49.39px;
+  width: 90%;
   font-size: 1.5vw;
-  /* Alterar */
-  background-image: url("https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/search-512.png");
-  background-size: 1.5vw;
-  background-repeat: no-repeat;
-  background-position: 2vw center;
-  text-indent: 4.5vw;
   background-color: var(--secondary-bg-color);
+  border-left: none;
 }
 #search:focus {
   background-image: none;
@@ -71,10 +97,15 @@ header nav ul {
   font-size: 0.6rem;
   display: flex;
   width: 40vw;
+  max-width: 446.8px;
   justify-content: space-between;
 }
 header nav ul li {
-  width: 20%;
+  width: 18%;
+  opacity: 0.7;
+}
+header nav ul li:hover {
+  opacity: initial;
 }
 header nav ul a {
   width: 100%;
@@ -84,11 +115,14 @@ header nav ul a {
 }
 header nav ul img {
   height: 2.602vw;
+  max-height: 29.09px;
   width: 2.602vw;
+  max-width: 29.09px;
   margin: 0 auto;
   margin-bottom: 1vw;
 }
-/* EU */
+
+/* ME */
 #me {
   display: flex;
   flex-direction: column;
@@ -97,6 +131,7 @@ header nav ul img {
 #me img {
   border-radius: 50%;
   height: 3.303vw;
+  max-height: 54px;
   margin-bottom: 0.5vw;
 }
 #me a {
@@ -104,6 +139,10 @@ header nav ul img {
 }
 #me h2 {
   font-size: 0.6rem;
+  opacity: 0.7;
+}
+#me:hover h2 {
+  opacity: initial;
 }
 
 /* MAIN */
@@ -118,24 +157,30 @@ main section h1,
 main section h3 {
   font-weight: 700;
 }
-#topMain, 
-#bottomMain{
+#topMain,
+#bottomMain {
   border-radius: 5px;
 }
 /* MAIN TOP */
 #banner {
   background-image: url(/assets/img/fundo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 17.556vw;
+  max-height: 196px;
+  position: relative;
 }
 
 main #topMain img {
   border-radius: 50%;
   height: 13.868vw;
+  max-height: 155px;
   transform: translateY(60%);
   margin: 0 4.081vw;
 }
 #mainInfo {
   height: 24.058vw;
+  max-height: 228px;
   min-height: 150px;
   display: flex;
   flex-direction: column;
@@ -154,6 +199,9 @@ main #topMain img {
   font-size: 0.75rem;
   margin: 1vw 0;
 }
+#mainInfo div {
+  display: flex;
+}
 #mainInfo button {
   border-radius: 20px;
   border: 1px solid #666666;
@@ -161,13 +209,23 @@ main #topMain img {
   font-weight: 700;
   color: #666666;
   background-color: var(--primary-bg-color);
-  padding: 0.392vw 1.708vw;
+  padding: 4px 16px;
   margin-right: 1.5vw;
+}
+#mainInfo button:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  border-width: 2px;
+  padding: 3px 15px;
 }
 #mainInfo div button:first-child {
   border: 1px solid #0b65c2;
   background-color: #0b65c2;
   color: var(--primary-bg-color);
+}
+#mainInfo div button:first-child:hover {
+  background-color: rgb(0, 65, 130);
+  border-width: 2px;
+  border-color: rgb(0, 65, 130);
 }
 /* MAIN BOTTOM */
 #bottomMain {
@@ -177,8 +235,8 @@ main #topMain img {
   height: 4.454vw;
   margin-right: 2.5vw;
 }
-#bottomMain article:not(:last-child){
-  border-bottom: 1px solid #EBEBEB;
+#bottomMain article:not(:last-child) {
+  border-bottom: 1px solid #ebebeb;
   margin-bottom: 2.5vw;
 }
 #bottomMain h2 {
@@ -197,26 +255,43 @@ main #topMain img {
   display: flex;
   margin-left: 2.5vw;
 }
+.box:hover {
+  text-decoration: underline;
+}
 .innerBox {
   margin-bottom: 2vw;
 }
-.outerBox{
-  
+.outerBox {
   margin-bottom: 2.5vw;
 }
-.separator{
+.separator {
   margin-left: 9.5vw;
   margin-bottom: 2.5vw;
 }
-.separator:not(:last-child){
-  border-bottom: 1px solid #EBEBEB;
+.separator:not(:last-child) {
+  border-bottom: 1px solid #ebebeb;
 }
 #bottomMain a {
   display: inline-block;
 }
 /* MEDIA QUERY */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   header nav ul a span {
     display: none;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #mainInfo h1 {
+    margin: 22.34px 0;
+  }
+  #mainInfo {
+    padding-bottom: 40.67px;
+  }
+  #mainInfo p {
+    margin: 11.17px 0;
+  }
+  #mainInfo button {
+    margin-right: 16.755px;
+    padding: 4.378px 19.078px;
   }
 }
