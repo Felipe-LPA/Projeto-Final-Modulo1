@@ -14,6 +14,9 @@ a {
 }
 body {
   background-color: var(--secondary-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .container {
   width: 93.238vw;
@@ -27,6 +30,7 @@ body {
 /* HEADER */
 header {
   width: 100vw;
+  display: flex;
   background-color: var(--primary-bg-color);
 }
 #header {
@@ -233,6 +237,7 @@ main #topMain img {
 }
 #bottomMain img {
   height: 4.454vw;
+  max-height: 48.98px;
   margin-right: 2.5vw;
 }
 #bottomMain article:not(:last-child) {
@@ -281,6 +286,9 @@ main #topMain img {
   }
 }
 @media screen and (min-width: 1100px) {
+  :root{
+    font-size: 22px;
+  }
   #mainInfo h1 {
     margin: 22.34px 0;
   }
