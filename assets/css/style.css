@@ -77,6 +77,7 @@ a#logo {
   border-bottom-color: rgb(118, 118, 118);
   background-color: var(--secondary-bg-color);
   border-right: none;
+  box-sizing: border-box;
 }
 #searchBox label:hover {
   cursor: text;
@@ -91,6 +92,7 @@ a#logo {
   font-size: 1.5vw;
   background-color: var(--secondary-bg-color);
   border-left: none;
+  box-sizing: border-box;
 }
 #search:focus {
   background-image: none;
@@ -131,6 +133,7 @@ header nav ul img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 3vw;
 }
 #me img {
   border-radius: 50%;
@@ -191,6 +194,7 @@ main #topMain img {
   justify-content: flex-end;
   padding-bottom: 3.6411vw;
   padding-left: 2.861vw;
+  box-sizing: border-box;
 }
 #mainInfo h1 {
   margin: 2vw 0;
@@ -220,6 +224,7 @@ main #topMain img {
   background-color: rgba(0, 0, 0, 0.08);
   border-width: 2px;
   padding: 3px 15px;
+
 }
 #mainInfo div button:first-child {
   border: 1px solid #0b65c2;
@@ -286,7 +291,7 @@ main #topMain img {
   }
 }
 @media screen and (min-width: 1100px) {
-  :root{
+  :root {
     font-size: 22px;
   }
   #mainInfo h1 {
@@ -301,5 +306,9 @@ main #topMain img {
   #mainInfo button {
     margin-right: 16.755px;
     padding: 4.378px 19.078px;
+  }
+  #mainInfo button:hover {
+    border-width: 2px;
+    padding: 3.378px 18.078px;
   }
 }
